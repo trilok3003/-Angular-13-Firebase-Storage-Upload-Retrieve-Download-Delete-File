@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FileUploadService } from 'src/app/services/file-upload.service';
 import { FileUpload } from 'src/app/models/file-upload.model';
+import { FileUploadService } from 'src/app/services/file-upload.service';
 
 @Component({
   selector: 'app-upload-form',
@@ -12,7 +12,7 @@ export class UploadFormComponent implements OnInit {
   currentFileUpload?: FileUpload;
   percentage = 0;
 
-  constructor(private uploadService: FileUploadService) { }
+  constructor(public uploadService: FileUploadService) { }
 
   ngOnInit(): void {
   }
